@@ -3,3 +3,9 @@ body {
 	font-size: 12pt;
 	background-color: #f0f0f0;
 }
+.delBtn {
+	color: #f00;
+}
+.elem {
+	display: inline;
+}
