@@ -63,21 +63,21 @@ function editButtonClick(){
   cancelBtn.appendChild(textCancelBtn);
   okBtn.onclick = endEdit;
   cancelBtn.onclick = endEdit;
+}
   
-  function endEdit(){
+function endEdit(){
     let li = this.parentNode;
     let newText = li.childNodes[3].value;
-    if (this.classList.contains("ok")) {
-      if (newText == "")
-        alert("Введите текст");
-      else {
-        this.parentElement.firstChild.innerHTML = newText;
-      }
+    if (!(this.classList.contains("ok")) || newText != "") {
+      if (this.classList.contains("ok")) {
+		this.parentElement.firstChild.innerHTML = newText;
+	  } 
+	  for (let i = 0; i < 3; i++)
+        li.childNodes[i].style.display = "inline";
+      while (li.childNodes.length > 3)
+        li.removeChild(li.lastChild);
+    } else {
+      alert("Введите текст");
     }
-    for (let i = 0; i < 3; i++)
-      li.childNodes[i].style.display = "inline";
-    while (li.childNodes.length > 3)
-      li.removeChild(li.lastChild);
-  }
 }
 
