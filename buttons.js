@@ -20,6 +20,7 @@ function addButtonClick(){
   let delBtn = document.createElement("button");
   let textDelBtn = document.createTextNode("X");
   delBtn.onclick = delButtonClick;
+  delBtn.setAttribute("class", "delBtn");
   
   let editBtn = document.createElement("button");
   let textEditBtn = document.createTextNode("Редактировать");
